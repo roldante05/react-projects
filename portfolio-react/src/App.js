@@ -1,10 +1,10 @@
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Inicio from "./componentes/Inicio";
-import Sobremi from "./componentes/Sobremi";
-import Proyectos from "./componentes/Proyectos";
-import Contacto from "./componentes/Contacto";
-import Header from "./componentes/Header";
+import Inicio from "./componentes/pages/Inicio";
+import Sobremi from "./componentes/pages/Sobremi";
+import Proyectos from "./componentes/pages/Proyectos";
+import Contacto from "./componentes/pages/Contacto";
+import Header from "./componentes/nav/Header";
 
 function App() {
   return (
