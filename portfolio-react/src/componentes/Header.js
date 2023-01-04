@@ -1,8 +1,8 @@
 import React from 'react';
 import '../assets/css/Header.css'
+import { Link, Outlet } from "react-router-dom";
 
 const Header = () => {
-  let pg = 'inicio';
   return (
     <div>
         <header>
@@ -14,16 +14,16 @@ const Header = () => {
             <div className="collapse navbar-collapse" id="navbarCollapse">
                 <ul className="navbar-nav me-auto mb-2 mb-md-0 mt-2">
                     <li className="nav-item">
-                        <a className={pg == 'inicio' ? "nav-link px-4 py-1 active" : "nav-link px-4 py-1"}  aria-current="page" href="#">Inicio</a>
+                        <Link className="nav-link px-4 py-1"  aria-current="page" to="/">Inicio</Link>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link px-4 py-1  " href="#" >Sobre mí</a>
+                    <Link className="nav-link px-4 py-1"  aria-current="page" to="/sobre-mi">Sobre mi</Link>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link px-4 py-1 " href="#">Proyectos</a>
+                    <Link className="nav-link px-4 py-1"  aria-current="page" to="/proyectos">Proyectos</Link>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link px-4 py-1  " href="#">Contacto</a>
+                    <Link className="nav-link px-4 py-1"  aria-current="page" to="/contacto">Contacto</Link>
                     </li>
                 </ul>
                 <div className="d-flex">
@@ -33,6 +33,7 @@ const Header = () => {
         </div>
     </nav>
 </header>
+<Outlet />
     </div>
   )
 }

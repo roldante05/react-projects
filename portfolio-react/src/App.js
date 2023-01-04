@@ -1,31 +1,24 @@
 import "./App.css";
-import Footer from "./componentes/Footer";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Inicio from "./componentes/Inicio";
+import Sobremi from "./componentes/Sobremi";
+import Proyectos from "./componentes/Proyectos";
+import Contacto from "./componentes/Contacto";
 import Header from "./componentes/Header";
 
 function App() {
   return (
-    
     <div>
-      <body id="inicio">
-      <Header/>
-        <main className="container">
-        <div className="row">
-            <div className="col-12 col-sm-12 ">
-                <div className="m-4 text-center my-4 ">
-                </div>
-                <div className="text-center col-12  d-flex justify-content-center">
-                    <div className="texto mt-1">
-                        <p className="col-12 py-1 px-4">Bienvenid@ a mi sitio web sobre sistemas.</p>
-                    </div>
-                </div>
-                <div className="btn-violet text-center mb-3">
-                    <a href="proyectos.php">Conoce mis proyectos</a>
-                </div>
-            </div>
-        </div>
-        </main>
-        <Footer/>
-      </body>
+      <BrowserRouter>
+        <Routes>
+        <Route path="/" element={<Header />}>
+            **<Route index element={<Inicio />}></Route>**
+          <Route path="sobre-mi" element={<Sobremi />}></Route>
+          <Route path="proyectos" element={<Proyectos />}></Route>
+          <Route path="contacto" element={<Contacto />}></Route>
+          </Route>
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
