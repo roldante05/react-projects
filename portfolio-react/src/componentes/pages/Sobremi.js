@@ -1,5 +1,8 @@
 import React from 'react';
+import Title from '../nav/Title';
+import Cursos from '../sobre-mi/Cursos';
 import Educacion from '../sobre-mi/Educacion';
+import Hobbies from '../sobre-mi/Hobbies';
 import Tecnologias from '../sobre-mi/Tecnologias';
 import Trabajo from '../sobre-mi/Trabajo';
 import Footer from './Footer';
@@ -8,6 +11,7 @@ import Footer from './Footer';
 const Sobremi = () => {
   return (
     <div>
+    <Title title='Sobre mi' />
     <body id="sobre-mi">
     <main className="container">
         <div className="row">
@@ -32,6 +36,8 @@ const Sobremi = () => {
    <Tecnologias/> 
    <Trabajo/>
    <Educacion/>
+   <Cursos/>
+   <Hobbies/>
     
 
         <Footer/>
