@@ -1,10 +1,14 @@
 import React from 'react';
+import Title from '../nav/Title';
 import Footer from './Footer';
+
+
 
 const Inicio = () => {
   return (
    
      <div>
+    <Title title='Inicio' />
       <body id="inicio">
         <main className="container">
         <div className="row">
