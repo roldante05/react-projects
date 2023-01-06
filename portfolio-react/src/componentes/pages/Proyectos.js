@@ -1,11 +1,12 @@
 import React from 'react';
+import ApiProyectos from '../mis-proyectos/ApiProyectos';
 import Title from '../nav/Title';
 import Footer from './Footer';
 
 
 const Proyectos = () => {
   return (
-    <div>
+    <>
     <Title title='Proyectos' />
         <main class="container">
         <div class="row">
@@ -18,12 +19,13 @@ const Proyectos = () => {
                 <p>Los siguientes son algunos de los trabajos que he realizado:</p>
             </div>
         </div>
-        <div class="row contenedor-proyecto">
-        </div>
+    
+        <ApiProyectos/>
+        
     </main>
 
          <Footer/>
-    </div>
+    </>
   )
 }
 
