@@ -8,7 +8,7 @@ const ApiProyectos = () => {
           {
         Databases.map((database) => {
          return (
-          <MisProyectos nombre={database.nombre} descripcion={database.descripcion} />
+          <MisProyectos nombre={database.nombre} descripcion={database.descripcion} repositorio={database.repositorio} />
          )
         })
       }
